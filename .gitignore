@@ -1,0 +1,12 @@
+.vscode
+CODES/20_Dynamic_Memory_Allocation_using_malloc.c
+CODES/21_Dynamic_Memory_Allocation_using_calloc.c
+CODES/22_Dynamic_Memory_Allocation_using_realloc.c
+CODES/23_Releasing_the_Dynamically_Allocated_Memory_using_free.c
+CODES/24_Structures_and_Functions_Part_1.c
+CODES/25_Structures_and_Functions_Part_2.c
+CODES/26_Structures_and_Functions_Part_3.c
+CODES/27_Structures_and_Functions_Part_4.c
+CODES/28_Structures_and_Functions_Part_5.c
+CODES/29_Structures_and_Functions_Part_6.c
+CODES/30_Self_Referential_Structures.c
