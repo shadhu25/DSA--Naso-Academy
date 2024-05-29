@@ -1,5 +1,4 @@
 .vscode
-CODES/20_Dynamic_Memory_Allocation_using_malloc.c
 CODES/21_Dynamic_Memory_Allocation_using_calloc.c
 CODES/22_Dynamic_Memory_Allocation_using_realloc.c
 CODES/23_Releasing_the_Dynamically_Allocated_Memory_using_free.c
