@@ -1,1 +1,25 @@
 .vscode
+NOTES/12_Asymptotic Analysis (Solved Problem 1)
+NOTES/13_Asymptotic Analysis (Solved Problem 2)
+NOTES/14_Asymptotic Analysis (Solved Problem 3)
+NOTES/15_Understanding the Void Pointers
+NOTES/16_Understanding the Null Pointers
+NOTES/17_Understanding the Dangling Pointers
+NOTES/18_Understanding the Wild Pointers
+NOTES/19_Basics of Dynamic Memory Allocation
+NOTES/20_Dynamic Memory Allocation using malloc
+NOTES/21_Dynamic Memory Allocation using calloc
+NOTES/22_Dynamic Memory Allocation using realloc
+NOTES/23_Releasing the Dinamically Allocated Memory using free
+NOTES/24_Structures and Functions (Part 1)
+NOTES/25_Structures and Functions (Part 2)
+NOTES/26_Structures and Functions (Part 3)
+NOTES/27_Structures and Functions (Part 4)
+NOTES/28_Structures and Functions (Part 5)
+NOTES/29_Structures and Functions (Part 6)
+NOTES/30_Self Referential Structures
+CODES/33_Creating_the_Node_of_a_Single_Linked_List.c
+CODES/35_Creating_a_Single_Linked_List_Part_2.c
+CODES/36_Traversing_a_Single_Linked_List_Counting_the_Nodes.c
+CODES/37_Traversing_a_Single_Linked_List_Printing_the_Data.c
+CODES/39_Single_Linked_List_Inserting_a_Node_at_the_End.c
