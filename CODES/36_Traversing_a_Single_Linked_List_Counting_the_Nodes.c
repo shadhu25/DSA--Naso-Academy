@@ -5,19 +5,7 @@ struct node {
     int data;
     struct node *next;
 };
-void countNodes(struct node *head){
-    int count=0;
-    if(head==NULL)
-        printf("Linkedlist is empty!\n");
-    else{
-        struct node *temp=head;
-        while(temp!=NULL){
-            count++;
-            temp=temp->next;
-        }
-        printf("total nodes: %d\n",count);
-    }
-}
+void countNodes(struct node*);
 int main(){
     struct node *head=malloc(sizeof(struct node));
     head->data=45;
@@ -35,4 +23,17 @@ int main(){
     printf("%d \n",head->next->next->data);
     countNodes(head);
     return 0;
+}
+void countNodes(struct node *head){
+    int count=0;
+    if(head==NULL)
+        printf("Linkedlist is empty!\n");
+    else{
+        struct node *temp=head;
+        while(temp!=NULL){
+            count++;
+            temp=temp->next;
+        }
+        printf("total nodes: %d\n",count);
+    }
 }
