@@ -1,0 +1,89 @@
+// reversing a doubly linked list
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node {
+    struct node *prev;
+    int data;
+    struct node *next;
+};
+
+void print(struct node*);
+struct node* addAtEnd(struct node*, int);
+struct node* createDlist(struct node*);
+struct node* reverse(struct node*);
+
+int main(){
+    struct node *head=NULL;
+    head=createDlist(head);
+    print(head);
+    head=reverse(head);
+    print(head);
+    return 0;
+}
+
+struct node* reverse(struct node *head){
+    struct node *ptr1=head;
+    struct node *ptr2=ptr1->next;
+
+    ptr1->next=NULL;
+    ptr1->prev=ptr2;
+
+    while(ptr2){
+        ptr2->prev=ptr2->next;
+        ptr2->next=ptr1;
+        ptr1=ptr2;
+        ptr2=ptr2->prev;
+    }
+    return ptr1;
+}
+
+struct node* createDlist(struct node *head){
+    int size,data;
+    printf("Please Enter number of nodes: ");
+    scanf("%d",&size);
+    if(size<1){
+        printf("Try again, You entered envalid size(%d)\n",size);
+    }
+    else{
+        for(int i=0;i<size;i++){
+            printf("enter node %d: ",i+1);
+            scanf("%d",&data);
+            head=addAtEnd(head,data);
+        }
+    }
+    return head;
+}
+
+struct node* addAtEnd(struct node *head, int data){
+    struct node *temp, *newNode=(struct node *)malloc(sizeof(struct node));
+    newNode->prev=NULL;
+    newNode->data=data;
+    newNode->next=NULL;
+    if(!head){ 
+        return newNode;
+    }
+    else{
+        temp=head;
+        while(temp->next){
+            temp=temp->next;
+        }
+        newNode->prev=temp;
+        temp->next=newNode;
+        return head;
+    }
+}
+
+void print(struct node *head){
+    if(!head)
+        printf("Linkedlist is empty!\n");
+    else{
+        struct node *temp=head;
+        printf("[ ");
+        while(temp){
+            printf("%d ",temp->data);
+            temp=temp->next;
+        }
+        printf("]\n");
+    }
+}
