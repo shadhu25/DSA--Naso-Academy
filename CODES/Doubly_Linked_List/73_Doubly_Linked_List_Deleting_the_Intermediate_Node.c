@@ -15,14 +15,14 @@ struct myNode {
 
 void print(struct node*);
 struct node* addAtEnd(struct node*, int);
-struct myNode createDlist(struct node*);
+void createDlist(struct node*);
 struct node* delAtBeg(struct node*);
 struct node* delAtEnd(struct node*);
 struct node* delAtPos(struct node*, int);
 
 int main(){
     struct node *head=NULL; 
-    mynode=createDlist(head);
+    createDlist(head);
     head=mynode.head;
     print(head);
     head=delAtPos(head,100);
@@ -31,7 +31,6 @@ int main(){
 }
 
 struct node* delAtPos(struct node *head, int position){
-    struct node *temp=head;
     if(position<1){
         printf("Try again, You entered a invalid position number(%d)\n",position);
     }
@@ -41,6 +40,7 @@ struct node* delAtPos(struct node *head, int position){
                 head=delAtBeg(head);
             }
             else{
+                struct node *temp=head;
                 while(position>1){
                     temp=temp->next;
                     position--;
@@ -92,9 +92,8 @@ struct node* delAtBeg(struct node *head){
     return head;
 }
 
-struct myNode createDlist(struct node *head){
+void createDlist(struct node *head){
     int size,data;
-    struct myNode mynode;
     printf("Please Enter number of nodes: ");
     scanf("%d",&size);
     if(size<1){
@@ -109,7 +108,6 @@ struct myNode createDlist(struct node *head){
     }
     mynode.head=head;
     mynode.size=size;
-    return mynode;
 }
 
 struct node* addAtEnd(struct node *head, int data){
