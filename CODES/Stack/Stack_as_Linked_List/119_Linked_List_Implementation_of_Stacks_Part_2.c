@@ -1,4 +1,4 @@
-// traversal and printing nodes of a single linklist
+// implementing stack using linked list
 #include<stdio.h>
 #include<stdlib.h>
 
