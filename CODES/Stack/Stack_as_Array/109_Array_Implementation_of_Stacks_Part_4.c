@@ -40,7 +40,12 @@ int main(){
                 }
                 break;
             case 3:
-                printf("The topmost element of the stack is %d\n",peek());
+                if(!isEmpty()){
+                    printf("The topmost element of the stack is %d\n",peek());
+                }
+                else{
+                    printf("Stack underflow!\n");
+                }
                 break;
             case 4:
                 print();
@@ -64,19 +69,11 @@ int isFull(){
 }
 
 int peek(){
-    if(isEmpty()){
-        printf("Stack underflow!\n");
-        return;
-    }
     return stackArr[top];
 }
 
 int pop(){
     int value;
-    if(isEmpty()){
-        printf("Stack underflow!\n");
-        return;
-    }
     value=stackArr[top--];
     return value;
 }

@@ -40,14 +40,9 @@ struct node* addAtBeg(struct node *head, int data){
     newNode=(struct node *)malloc(sizeof(struct node));
         newNode->data=data;
         newNode->next=NULL;
-    if(head==NULL){
-        head=newNode;
-    }
-    else{
         newNode->next=head;
         head=newNode;
-    }
-    return head;
+        return head;
 }
 void print(struct node *head){
     if(head==NULL)

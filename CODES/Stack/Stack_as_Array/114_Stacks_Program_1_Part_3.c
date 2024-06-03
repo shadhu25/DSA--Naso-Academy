@@ -31,7 +31,7 @@ int main(){
                 push(data);
                 break;
             case 2:
-                if(!isEmpty()){
+                 if(!isEmpty()){
                     data=pop();
                     printf("Deleted element is %d\n",data);
                 }
@@ -40,7 +40,12 @@ int main(){
                 }
                 break;
             case 3:
-                printf("The topmost element of the stack is %d\n",peek());
+                if(!isEmpty()){
+                    printf("The topmost element of the stack is %d\n",peek());
+                }
+                else{
+                    printf("Stack underflow!\n");
+                }
                 break;
             case 4:
                 print();
@@ -56,18 +61,10 @@ int main(){
 }
 
 int peek(){
-    if(isEmpty()){
-        printf("Stack underflow!\n");
-        return;
-    }
     return stackArr[0];
 }
 
 int pop(){
-    if(isEmpty()){
-        printf("Stack underflow!\n");
-        return;
-    }
     int value;
     value=stackArr[0];
     for(int i=0;i<first;i++)
