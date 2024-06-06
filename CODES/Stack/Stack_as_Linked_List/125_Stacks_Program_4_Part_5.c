@@ -1,4 +1,4 @@
-// stack program 4
+// stack program 4 -> reversing a stack
 #include<stdio.h>
 
 void changeVal(int **ptr){
