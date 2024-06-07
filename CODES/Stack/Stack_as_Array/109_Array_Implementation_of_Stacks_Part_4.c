@@ -31,7 +31,7 @@ int main(){
                 push(data);
                 break;
             case 2:
-                 if(!isEmpty()){
+                if(!isEmpty()){
                     data=pop();
                     printf("Deleted element is %d\n",data);
                 }
@@ -57,7 +57,6 @@ int main(){
                 printf("Invalid choice!\n");
         }
     }
-    return 0;
 }
 
 int isEmpty(){
@@ -69,11 +68,21 @@ int isFull(){
 }
 
 int peek(){
+    // optional for this code
+    // if(isEmpty()){
+    //     printf("Stack underflow!\n");
+    //     exit(1);
+    // }
     return stackArr[top];
 }
 
 int pop(){
     int value;
+    // optional for this code
+    // if(isEmpty()){
+    //     printf("Stack underflow!\n");
+    //     exit(1);
+    // }
     value=stackArr[top--];
     return value;
 }
@@ -81,19 +90,20 @@ int pop(){
 void print(){
     if(isEmpty()){
         printf("Stack underflow!\n");
-        return;
     }
-    int i=top;
-    printf("[ ");
-    while(i>=0)
-        printf("%d ",stackArr[i--]);
-    printf("]\n");
+    else{
+        int i=top;
+        printf("[ ");
+        while(i>=0)
+            printf("%d ",stackArr[i--]);
+        printf("]\n");
+    }
 }
 
 void push(int data){
     if(isFull()){
         printf("Stack overflow!\n");
-        return;
     }
-    stackArr[++top]=data;
+    else
+        stackArr[++top]=data;
 }

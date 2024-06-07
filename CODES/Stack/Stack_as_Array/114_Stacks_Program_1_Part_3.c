@@ -61,11 +61,21 @@ int main(){
 }
 
 int peek(){
+    // optional for this code
+    // if(isEmpty()){
+    //     printf("Stack underflow!\n");
+    //     exit(1);
+    // }
     return stackArr[0];
 }
 
 int pop(){
     int value;
+    // optional for this code
+    // if(isEmpty()){
+    //     printf("Stack underflow!\n");
+    //     exit(1);
+    // }
     value=stackArr[0];
     for(int i=0;i<first;i++)
         stackArr[i]=stackArr[i+1];
@@ -77,11 +87,12 @@ int pop(){
 void push(int data){
     if(isFull()){
         printf("Stack overflow!\n");
-        return;
     }
-    for(int i=++first; i>0;i--)
-        stackArr[i]=stackArr[i-1];
-    stackArr[0]=data;
+    else{
+        for(int i=++first; i>0;i--)
+            stackArr[i]=stackArr[i-1];
+        stackArr[0]=data;
+    }
 }
 
 int isFull(){
@@ -95,10 +106,11 @@ int isEmpty(){
 void print(){
     if(isEmpty()){
         printf("Stack underflow!\n");
-        return;
     }
-    printf("[ ");
-    for(int i=0; i<=first;i++)
-        printf("%d ",stackArr[i]);
-    printf("]\n");
+    else{
+        printf("[ ");
+        for(int i=0; i<=first;i++)
+            printf("%d ",stackArr[i]);
+        printf("]\n");
+    }
 }

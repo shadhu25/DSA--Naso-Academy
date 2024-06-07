@@ -54,6 +54,7 @@ int main(){
                 break;
             case 5:
                 reverse(&stack);
+                if(!isEmpty(&stack))
                 printf("Stack is reversed\n");
                 break;
             case 6:
@@ -67,20 +68,30 @@ int main(){
 }
 
 void reverse(struct node **stack){
-    struct node *temp1, *temp2;
-    temp1=temp2=NULL;
-    while(*stack){
-        push(&temp1,pop(stack));
+    if(isEmpty(stack)){
+        printf("Stack underflow!\n");
     }
-    while(temp1){
-        push(&temp2,pop(&temp1));
-    }
-    while(temp2){
-        push(stack,pop(&temp2));
+    else{
+        struct node *temp1, *temp2;
+        temp1=temp2=NULL;
+        while(*stack){
+            push(&temp1,pop(stack));
+        }
+        while(temp1){
+            push(&temp2,pop(&temp1));
+        }
+        while(temp2){
+            push(stack,pop(&temp2));
+        }
     }
 }
 
 int pop(struct node **top){
+    // optional for this code
+    // if(isEmpty()){
+    //     printf("Stack underflow!\n");
+    //     exit(1);
+    // }
     struct node *temp;
     int value;
     temp=*top;
@@ -92,6 +103,11 @@ int pop(struct node **top){
 }
 
 int peek(struct node **top){
+    // optional for this code
+    // if(isEmpty()){
+    //     printf("Stack underflow!\n");
+    //     exit(1);
+    // }
     return (*top)->data;
 }
 

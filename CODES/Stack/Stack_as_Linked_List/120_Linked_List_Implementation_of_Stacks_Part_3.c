@@ -61,6 +61,11 @@ int main(){
 }
 
 int pop(){
+    // optional for this code
+    // if(isEmpty()){
+    //     printf("Stack underflow!\n");
+    //     exit(1);
+    // }
     struct node *temp;
     int value;
     temp=top;
@@ -72,6 +77,11 @@ int pop(){
 }
 
 int peek(){
+    // optional for this code
+    // if(isEmpty()){
+    //     printf("Stack underflow!\n");
+    //     exit(1);
+    // }
     return top->data;
 }
 
