@@ -1,4 +1,4 @@
-// Array implementation of stack
+// Application of stack (Nested Brackets)
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

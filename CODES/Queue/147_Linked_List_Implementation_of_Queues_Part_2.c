@@ -1,6 +1,6 @@
+// implementing Queue using linked kist
 #include<stdio.h>
 #include<stdlib.h>
-#define MAX 100
 
 struct node {
     int data;
@@ -12,7 +12,6 @@ int peek();
 int dequeue();
 void enqueue(int);
 int isEmpty();
-int isFull();
 
 int main(){
     int data,choice;
@@ -79,6 +78,11 @@ int peek(){
 }
 
 int dequeue(){
+    // optional code for this program
+    // if(isEmpty()){
+    //     printf("Queue underflow!\n");
+    //     exit(1);
+    // }
     int data;
     struct node *temp=front;
     data=temp->data;
@@ -107,8 +111,6 @@ void enqueue(int data){
     }
     else{
         struct node *temp=rear;
-        while(temp->next)
-            temp=temp->next;
         temp->next=newNode;
     }
     rear=newNode;
